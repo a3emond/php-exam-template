@@ -47,7 +47,7 @@ project-root/
 ### 📦 **Run the Project**
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/php-exam-template.git
+   git clone https://github.com/a3emond/php-exam-template.git
    cd php-exam-template
    ```
 
