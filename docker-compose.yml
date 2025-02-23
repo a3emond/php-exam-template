@@ -1,0 +1,18 @@
+services:
+  php-apache:
+    build: .
+    container_name: php_exam
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html # Web root folder
+      - ./apache/uploads:/var/www/html/uploads # Uploads folder
+      - ./apache/apache.conf:/etc/apache2/sites-available/000-default.conf # Apache config file
+      - ./apache/php.ini:/usr/local/etc/php/conf.d/custom-php.ini # PHP config file
+      - ./apache/logs:/var/log/apache2 # Logs Mapping
+    networks:
+      - php_network # Network for PHP container
+
+networks:
+  php_network:
+    driver: bridge # Bridge network for PHP container

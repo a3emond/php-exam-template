@@ -1,0 +1,263 @@
+/* Reset body margin and padding */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Language Toggle */
+.language-toggle {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Navbar */
+@media (max-width: 690px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        border-bottom: 1px solid #444;
+    }
+
+    /* Active Class to Open Menu */
+    .nav-links.active {
+        max-height: 100vh; /* Allow full screen height */
+        overflow-y: auto; /* Enable scrolling if needed */
+    }
+
+    /* Add padding to prevent last item from being cut */
+    .nav-links li:last-child {
+        padding-bottom: 12px;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.toggle .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.toggle .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.toggle .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+
+/* Language Toggle Button */
+.language-toggle {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin-left: auto;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.language-toggle:hover {
+    background-color: #575757;
+}
+
+/* Header & Footer */
+header, footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Main Content centered */
+#main-content {
+    flex: 1;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    text-align: left;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    /* Hide scrollbar but keep scrolling */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#main-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Footer sticks to bottom */
+footer {
+    flex-shrink: 0;
+}
+
+
+
+/* 💡 Responsive Main Content */
+@media (max-width: 768px) {
+    #main-content {
+        padding: 15px;
+    }
+}
+
+/* Directory Tree Style */
+pre {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: pre-wrap; /* Allows wrapping if needed */
+    word-wrap: break-word; /* Wrap long lines */
+    border: 1px solid #ddd;
+    font-family: 'Courier New', monospace;
+    max-width: 100%; /* Stay within container */
+    min-height: 275px;
+    box-sizing: border-box;
+}
+
+/*  Responsive Pre for Smaller Screens */
+@media (max-width: 690px) {
+    pre {
+        white-space: pre; /* Keep horizontal scrolling on narrow screens */
+        overflow-x: auto; /* Ensure the tree stays intact */
+    }
+}
