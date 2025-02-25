@@ -19,6 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = 'Form submission is invalid (CSRF failed)';
     }
 
+    // Form Validation with isset()
+    $name = isset($_POST['name']) ? trim($_POST['name']) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+    $password = isset($_POST['password']) ? $_POST['password'] : '';
+
     // Form Validation
     if (empty($_POST['name'])) {
         $errors[] = 'Name is required';
@@ -47,13 +52,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!-- Form with Correct Action -->
 <h2>Exercise 1</h2>
 
-<form action="/ex1" method="post" data-no-spa >
+<form action="/ex1" method="post">
     <input type="hidden" name="token" value="<?php echo htmlspecialchars($token); ?>">
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="email" placeholder="Email">
+    
+    <input type="text" name="name" placeholder="Name" 
+        value="<?php echo isset($_POST['name']) ? htmlspecialchars($_POST['name']) : ''; ?>">
+    
+    <input type="text" name="email" placeholder="Email" 
+        value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
+    
     <input type="password" name="password" placeholder="Password">
+    
     <input type="submit" value="Submit">
 </form>
