@@ -4,6 +4,7 @@ session_start();
 // Define available routes
 $routes = [
     '/' => 'pages/home.php',
+    '/home' => 'pages/home.php',
     '/ex1' => 'pages/ex1.php',
     '/ex2' => 'pages/ex2.php',
     '/ex3' => 'pages/ex3.php',
