@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.getElementById('main-content');
 
+/*
+    // -------------------------------SPA Navigation-----------------------------------
     // SPA Navigation Handling
     document.body.addEventListener('click', async (e) => {
         if (e.target.matches('[data-link]')) {
@@ -42,8 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle Browser Back/Forward
     window.onpopstate = () => navigateTo(window.location.pathname);
 
+    // ----------------- Form Handling: Bypass SPA for Form Submissions -------------------
+    document.body.addEventListener('submit', (e) => {
+        const form = e.target;
+        if (form.hasAttribute('data-no-spa')) {
+            // Allow native form submission (reload page)
+            e.stopPropagation();
+            return;
+        } else {
+            // Prevent default for SPA-like handling if needed
+            e.preventDefault();
+            console.log('Form submitted in SPA mode');
+        }
+    });
+
     // Initial Page Load
     navigateTo(window.location.pathname);
+
+    */
 
     // -------------------------------Language Switcher-----------------------------------
     

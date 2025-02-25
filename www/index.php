@@ -1,5 +1,9 @@
 <?php
 session_start();
+// generate token
+if (!isset($_SESSION['token'])) {
+    $_SESSION['token'] = md5(uniqid(rand(), TRUE));
+}
 
 // Define available routes
 $routes = [
