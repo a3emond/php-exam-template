@@ -18,6 +18,7 @@ $routes = [
     '/ex7' => 'pages/ex7.php',
     '/ex8' => 'pages/ex8.php',
     '/ex9' => 'pages/ex9.php',
+    '/form-practice' => 'pages/formPractice.php',
 ];
 
 // Get requested route

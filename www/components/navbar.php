@@ -21,6 +21,7 @@
             <li><a href="ex7">Ex7</a></li>
             <li><a href="ex8">Ex8</a></li>
             <li><a href="ex9">Ex9</a></li>
+            <li><a href="form-practice">Form Practice</a></li>
         </ul>
     </div>
 

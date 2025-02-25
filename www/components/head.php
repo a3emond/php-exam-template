@@ -10,6 +10,7 @@ $pageTitles = [
     '/ex7' => 'Exercise 7',
     '/ex8' => 'Exercise 8',
     '/ex9' => 'Exercise 9',
+    '/form-practice' => 'Form Practice',
 ];
 
 // Get current path
