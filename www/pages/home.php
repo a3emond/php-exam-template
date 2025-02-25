@@ -24,9 +24,9 @@
         data-lang-fr="<strong>Routage dynamique :</strong> Le fichier <code>index.php</code> agit comme routeur principal, gérant les requêtes et chargeant le contenu approprié dans la zone de contenu principale.">
         <strong>Dynamic Routing:</strong> The <code>index.php</code> acts as the main router, handling requests and loading the appropriate content into the main content area.
     </li>
-    <li data-lang-en="<strong>SPA Behavior:</strong> JavaScript handles client-side navigation, dynamically fetching pages and injecting them into the <code>#main-content</code> div."
-        data-lang-fr="<strong>Comportement SPA :</strong> JavaScript gère la navigation côté client, récupérant dynamiquement les pages et les injectant dans la div <code>#main-content</code>.">
-        <strong>SPA Behavior:</strong> JavaScript handles client-side navigation, dynamically fetching pages and injecting them into the <code>#main-content</code> div.
+    <li data-lang-en="<strong>SPA Behavior(Disabled):</strong> JavaScript handles client-side navigation, dynamically fetching pages and injecting them into the <code>#main-content</code> div."
+        data-lang-fr="<strong>Comportement SPA (Disabled):</strong> JavaScript gère la navigation côté client, récupérant dynamiquement les pages et les injectant dans la div <code>#main-content</code>.">
+        <strong>SPA Behavior (Disabled):</strong> JavaScript handles client-side navigation, dynamically fetching pages and injecting them into the <code>#main-content</code> div.
     </li>
     <li data-lang-en="<strong>PHP Exercises:</strong> Each exam exercise is stored as a separate PHP file under the <code>pages/</code> directory (<code>ex1.php</code>, <code>ex2.php</code>, etc.)."
         data-lang-fr="<strong>Exercices PHP :</strong> Chaque exercice d'examen est stocké dans un fichier PHP séparé sous le répertoire <code>pages/</code> (<code>ex1.php</code>, <code>ex2.php</code>, etc.).">
